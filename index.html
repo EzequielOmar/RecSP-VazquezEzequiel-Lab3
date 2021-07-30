@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vazquez, Ezequiel Omar - Labo3 - 1er Parcial</title>
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- Font Awesome icons (free version solo iconos de version 4)-->
+  <script src="https://use.fontawesome.com/8770965d48.js"></script>
+  <script type="module" src="./js/index.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container justify-content-lg-between">
+        <a href="#"><i class="fa fa-paw navbar-brand offset-1 logo" alt="logo"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
+            <a class="nav-link" href="#">Anuncios</a>
+            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link" href="#">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container-fluid text-center">
+      <div id="pets">
+        <div class="row justify-content-center align-items-center" id="slogan">
+          <h1>¡Adopte una mascota!</h1>
+        </div>
+        <img src="imagenes/pets.jpg" class="img-fluid" alt="pets-image" />
+      </div>
+      <h2>Administración</h2>
+    </div>
+    <div class="cotainer">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form>
+            <fieldset class="border p-2">
+              <legend class="w-auto">Información del Anuncio</legend>
+              <input class="" type="text" name="id" id="id" hidden />
+              <div class="form-group">
+                <label for="titulo">TITULO:</label>
+                <input class="form-control" type="text" name="titulo" id="titulo" required placeholder="Título" />
+              </div>
+              <div class="form-group">
+                <label for="descripcion">DESCRIPCIÓN:</label>
+                <input class="form-control" type="text" name="descripcion" id="descripcion" required
+                  placeholder="Descripción" />
+              </div>
+              <div class="form-group">
+                <label class="col-12" for="animal">ANIMAL:</label>
+                <label class="offset-3 form-check-label" for="animal">PERRO</label>
+                <input class="form-check-inline" class="form-check" type="radio" name="animal" value="perro" checked />
+                <label class="offset-2 form-check-label" for="animal">GATO</label>
+                <input class="form-check-inline" type="radio" name="animal" value="gato" />
+              </div>
+              <div class="form-group">
+                <label for="precio">PRECIO:</label>
+                <input class="form-control" type="number" step="0.01" name="precio" required id="precio"
+                  placeholder="Precio" />
+              </div>
+              <div class="form-group row align-content-center">
+                <div class="col-4 flexy">
+                  <i class="fa fa-paw"></i>
+                  <input class="form-control" type="text" name="raza" required id="raza" placeholder="Raza" />
+                </div>
+                <div class="col-4 flexy">
+                  <i class="fa fa-birthday-cake"></i>
+                  <input class="form-control" type="date" name="fecha" required id="fecha" />
+                </div>
+                <div class="col-4 flexy">
+                  <i class="fa fa-medkit" aria-hidden="true"></i>
+                  <select class="form-control" name="vacuna" id="vacuna">
+                    <option value="" disabled selected hidden>---Elegir---</option>
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+            <div id="form-manager">
+              <div class="btn btn-primary">
+                <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                <input type="submit" id="send" value="Guardar">
+              </div>
+              <div class="btn btn-secondary">
+                <i class="fa fa-ban" aria-hidden="true"></i>
+                <input type="submit" id="cancel" value="Cancelar" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <article class="container">
+    <div id="spinner-div"></div>
+    <div id="filtro">
+      <fieldset class="border p-2">
+        <legend class="w-auto"> Filtrar:</legend>
+        <div class="row m-1">
+          <div class="col-6">
+            <label for="animal">Por animal:</label>
+            <select class="form-control" name="animal" id="filtro-animal">
+              <option value="" disabled selected hidden>---Elegir---</option>
+              <option value="todos">Todos</option>
+              <option value="perro">Perro</option>
+              <option value="gato">Gato</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="promedio">Precio promedio:</label>
+            <span class="input-group-text" id="promedio">-</span>
+          </div>
+          <div class="col-12 flex">
+            <label for="maximo">Precio maximo:</label>
+            <span class="input-group-text" id="maximo">-</span>
+          </div>
+          <div class="col-12 flex">
+            <label for="minimo">Precio mínimo:</label>
+            <span class="input-group-text" id="minimo">-</span>
+          </div>
+          <div class="col-12 flex">
+            <label for="vacunados">Promedio vacunados:</label>
+            <span class="input-group-text" id="vacunados">-</span>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="table-responsive" id="select_columna">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope=col>
+              titulo
+              <input type="checkbox" class="form-check-input cb_columnas" id="titulo">
+            </th>
+            <th scope=col>
+              transaccion
+              <input type="checkbox" class="form-check-input cb_columnas" id="transaccion">
+            </th>
+            <th scope=col>
+              descripcion
+              <input type="checkbox" class="form-check-input cb_columnas" id="descripcion">
+            </th>
+            <th scope=col>
+              precio
+              <input type="checkbox" class="form-check-input cb_columnas" id="precio">
+            </th>
+            <th scope=col>
+              animal
+              <input type="checkbox" class="form-check-input cb_columnas" id="animal">
+            </th>
+            <th scope=col>
+              raza
+              <input type="checkbox" class="form-check-input cb_columnas" id="raza">
+            </th>
+            <th scope=col>
+              fecha
+              <input type="checkbox" class="form-check-input cb_columnas" id="fecha">
+            </th>
+            <th scope=col>
+              vacuna
+              <input type="checkbox" class="form-check-input cb_columnas" id="vacuna">
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="table-responsive" id="lista"></div>
+  </article>
+  <footer>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container justify-content-center">
+        <a href="#"><i class="fa fa-paw navbar-brand offset-1 logo" alt="logo"></i></a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
+            <a class="nav-link" href="#">Anuncios</a>
+            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link" href="#">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </footer>
+</body>
+
+</html>

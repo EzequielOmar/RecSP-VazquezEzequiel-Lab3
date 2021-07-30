@@ -1,0 +1,59 @@
+{
+  "mascota": [
+    {
+      "id": 1345345,
+      "titulo": "Vendo pitbul americano.",
+      "transaccion": "venta",
+      "descripcion": "muyyyyy molesto, y come.",
+      "precio": "5500",
+      "animal": "gato",
+      "raza": "pitbull",
+      "fecha": "2020-05-03",
+      "vacuna": "no"
+    },
+    {
+      "id": 2345546,
+      "titulo": "vendo persa",
+      "transaccion": "venta",
+      "descripcion": "es alto gato, se baña solo y todo.",
+      "precio": "1500",
+      "animal": "gato",
+      "raza": "persa",
+      "fecha": "2021-05-03",
+      "vacuna": "si"
+    },
+    {
+      "id": 1626402318263,
+      "titulo": "Vendo ovejero",
+      "transaccion": "venta",
+      "descripcion": "sin ovejas, solo el perro.",
+      "precio": "9500",
+      "animal": "perro",
+      "raza": "2212122",
+      "fecha": "2021-12-12",
+      "vacuna": "no"
+    },
+    {
+      "id": 1626471107641,
+      "titulo": "siames con manchitas",
+      "transaccion": "venta",
+      "descripcion": "buena onda",
+      "precio": "4331",
+      "animal": "gato",
+      "raza": "siames",
+      "fecha": "2021-11-11",
+      "vacuna": "si"
+    },
+    {
+      "id": 1626471107641,
+      "titulo": "pinchapulga fiel",
+      "transaccion": "venta",
+      "descripcion": "negro con tonos de marron, ojos marrones bien de barrio.",
+      "precio": "150",
+      "animal": "perro",
+      "raza": "ramdom-crusexion",
+      "fecha": "2021-04-15",
+      "vacuna": "no"
+    }
+  ]
+}
